@@ -9,6 +9,13 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 COPY install-teleport.sh /tmp/install-teleport.sh
 RUN sh /tmp/install-teleport.sh && rm -f /tmp/install-teleport.sh
 
+# Copy the start-teleport.sh script
+COPY start-teleport.sh /start-teleport.sh
+RUN chmod +x /start-teleport.sh
+
+# Copy the teleport-template.yaml file
+COPY teleport-template.yaml /teleport-template.yaml
+
 # Create and switch to non-root user for security
 RUN useradd -m -s /bin/bash teleport
 USER teleport
@@ -21,3 +28,4 @@ USER teleport
 #RUN adduser -D myuser
 #USER myuser
 
+CMD ["/start-teleport.sh"]
