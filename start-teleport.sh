@@ -25,6 +25,8 @@ echo "$TP_LICENSE" | tee /var/lib/teleport/license.pem > /dev/null
 chmod 600 /var/lib/teleport/license.pem
 chmod 644 /etc/teleport.yaml
 
+cat /etc/teleport.yaml
+
 # Start Teleport
 exec teleport start --config="/etc/teleport.yaml"
 
