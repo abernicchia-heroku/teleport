@@ -25,8 +25,9 @@ echo "$TP_LICENSE" | tee /var/lib/teleport/license.pem > /dev/null
 chmod 600 /var/lib/teleport/license.pem
 chmod 644 /etc/teleport.yaml
 
+# debug - to be removed
 cat /etc/teleport.yaml
 
-# Start Teleport
-exec teleport start --config="/etc/teleport.yaml"
+# Start Teleport with debug flag if TP_DEBUG is set
+exec teleport start --config="/etc/teleport.yaml" ${TP_DEBUG:+"--debug"}
 
