@@ -29,7 +29,7 @@ proxy_service:
   acme: {}
   trust_x_forwarded_for: true 
   #proxy_protocol: "on"
-  https_cert_file: ""
-  https_key_file: ""
-  listen_addr: 0.0.0.0:3023
-  tunnel_listen_addr: 0.0.0.0:3024
+  # https_cert_file: ""
+  # https_key_file: ""
+  # listen_addr: 0.0.0.0:3023
+  # tunnel_listen_addr: 0.0.0.0:3024
