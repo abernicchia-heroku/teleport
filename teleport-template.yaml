@@ -26,8 +26,7 @@ proxy_service:
   public_addr: $TP_CLUSTER_DOMAIN_NAME:443
   https_keypairs: []
   https_keypairs_reload_interval: 0s
-  acme:
-    enabled: "no"
+  acme: {}
   # proxy_protocol: "on"
   # https_cert_file: ""
   # https_key_file: ""
