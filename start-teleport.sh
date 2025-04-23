@@ -29,5 +29,5 @@ chmod 644 /etc/teleport.yaml
 cat /etc/teleport.yaml
 
 # Start Teleport with debug flag if TP_DEBUG is set
-exec teleport start --config="/etc/teleport.yaml" ${TP_DEBUG:+"--debug"}
+exec teleport start --config="/etc/teleport.yaml" --insecure-no-tls ${TP_DEBUG:+"--debug"}
 
